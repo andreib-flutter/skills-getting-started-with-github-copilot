@@ -92,12 +92,53 @@ section h3 {
 
 .participants-list {
   margin: 0;
-  padding-left: 18px;
+  padding-left: 0;
+  list-style: none;
 }
 
-.participants-list li {
-  margin-bottom: 5px;
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.participant-email {
   color: #24304f;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+}
+
+.participant-delete {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ef9a9a;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 1;
+  font-size: 20px;
+  background-color: #fff5f6;
+  color: #c62828;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.participant-delete:hover {
+  transform: scale(1.06);
+  background-color: #ffe7ea;
+  border-color: #e57373;
+}
+
+.participant-delete:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
 }
 
 .participants-empty {
